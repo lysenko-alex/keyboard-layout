@@ -32,6 +32,11 @@ points:
     matrix:
       key.padding: ky
       columns:
+        outer_pinky:
+          key:
+            stagger: 0.2 ky
+            spread: kx
+            column_net: col_outer_pinky
         pinky:
           key:
             stagger: 0 ky
@@ -163,13 +168,13 @@ outlines:
       what: circle
       where:
         - ref: matrix_ring_home
-          shift: [-0.5 kx, 0 ky]
+          shift: [-1.5 kx, 0 ky]
       radius: 1.05
     bottom_left:
       what: circle
       where:
         - ref: matrix_pinky_bottom
-          shift: [0.5 kx, 0]
+          shift: [-0.5 kx, 0]
       radius: 1.05
     top_right:
       what: circle
@@ -227,7 +232,7 @@ pcbs:
             - matrix_ring_home
           shift: [-0.25 kx, 0.5 ky]
         params:
-          text: "JLCJLCJLCJLC"
+          text: "@ALEXYS@"
           justify: left
   bottom_plate:
     outlines:
@@ -388,23 +393,4 @@ pcbs:
         params:
           from: GND
           to: RST
-      info_l:
-        what: text
-        where:
-          ref:
-            - matrix_pinky_bottom
-          shift: [0.75 kx, 0]
-        params:
-          text: "samoklava v0.3\\nby soundmonster"
-          justify: left
-      info_r:
-        what: text
-        where:
-          ref:
-            - matrix_pinky_bottom
-          shift: [0.75 kx, 0]
-        params:
-          layer: B.SilkS
-          text: "samoklava v0.3\\nby soundmonster"
-          justify: right mirror
 
